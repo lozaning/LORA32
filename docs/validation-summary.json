@@ -1,0 +1,247 @@
+{
+  "prepared_utc": "2026-10-03T11:17:08.141016+00:00",
+  "release": "INFO19",
+  "app_sha256": "9b52c7b676945247ba00ccaf386008f390fb34358b4165cf0a664ef41867d665",
+  "privacy": "Original receipts, private serial identities, paths, chat history and RF recordings are not bundled. Receipt hashes identify retained originals; this is a curated summary.",
+  "info19": {
+    "terminal_regression": {
+      "passed": true,
+      "total_cases": 26,
+      "invalid_input_controls": 8,
+      "started_utc": "2026-10-03T07:28:13.501465+00:00",
+      "ended_utc": "2026-10-03T07:28:34.029001+00:00",
+      "cases": [
+        {
+          "name": "plain Enter",
+          "passed": true,
+          "bytes": 21
+        },
+        {
+          "name": "unicode",
+          "passed": true,
+          "bytes": 26
+        },
+        {
+          "name": "256-byte fragmented UTF8",
+          "passed": true,
+          "bytes": 256
+        },
+        {
+          "name": "plain Enter",
+          "passed": true,
+          "bytes": 21
+        },
+        {
+          "name": "unicode",
+          "passed": true,
+          "bytes": 26
+        },
+        {
+          "name": "256-byte fragmented UTF8",
+          "passed": true,
+          "bytes": 256
+        },
+        {
+          "name": "command name is text",
+          "passed": true,
+          "bytes": 4
+        },
+        {
+          "name": "leading slash",
+          "passed": true,
+          "bytes": 14
+        },
+        {
+          "name": "reserved SYNC escaped by /send",
+          "passed": true,
+          "bytes": 8
+        },
+        {
+          "name": "typing pause beyond old 3s timeout",
+          "passed": true,
+          "bytes": 29
+        },
+        {
+          "name": "UTF8 backspace",
+          "passed": true,
+          "bytes": 10
+        },
+        {
+          "name": "DEL editing",
+          "passed": true,
+          "bytes": 3
+        },
+        {
+          "name": "escaped control output",
+          "passed": true,
+          "bytes": 23
+        },
+        {
+          "name": "257-byte rejected",
+          "passed": true,
+          "expected_error": "ERR chat_text_1_to_256_bytes"
+        },
+        {
+          "name": "line overflow rejected",
+          "passed": true,
+          "expected_error": "ERR command_length"
+        },
+        {
+          "name": "NUL rejected",
+          "passed": true,
+          "expected_error": "ERR command_length"
+        },
+        {
+          "name": "unknown slash command",
+          "passed": true,
+          "expected_error": "ERR chat_command_use_/help"
+        },
+        {
+          "name": "post-invalid recovery",
+          "passed": true,
+          "bytes": 27
+        },
+        {
+          "name": "257-byte rejected",
+          "passed": true,
+          "expected_error": "ERR chat_text_1_to_256_bytes"
+        },
+        {
+          "name": "line overflow rejected",
+          "passed": true,
+          "expected_error": "ERR command_length"
+        },
+        {
+          "name": "NUL rejected",
+          "passed": true,
+          "expected_error": "ERR command_length"
+        },
+        {
+          "name": "unknown slash command",
+          "passed": true,
+          "expected_error": "ERR chat_command_use_/help"
+        },
+        {
+          "name": "post-invalid recovery",
+          "passed": true,
+          "bytes": 27
+        },
+        {
+          "name": "manual node identity",
+          "passed": true,
+          "bytes": 14
+        },
+        {
+          "name": "binary protocol plus readable peer output",
+          "passed": true
+        },
+        {
+          "name": "re-enter from raw CR",
+          "passed": true,
+          "bytes": 22
+        }
+      ]
+    },
+    "gui_handoff": {
+      "passed": true,
+      "exact_acknowledged_receptions": 4,
+      "started_utc": "2026-10-03T07:29:48.373010+00:00",
+      "ended_utc": "2026-10-03T07:29:55.777653+00:00"
+    },
+    "boards_tested": 2,
+    "transport": "native USB Serial/JTAG",
+    "physical_uart_tested": false,
+    "pipeline_unchanged_from_info18": true,
+    "clean_health_checkpoints": {
+      "adc_overruns": 0,
+      "bb_overruns": 0,
+      "event_drops": 0,
+      "discontinuities": 0,
+      "stream_failures": 0
+    }
+  },
+  "info18_context": {
+    "app_sha256": "1dba010fd2e8e9680740a7f657fd0c51eb6ae18966f07203016330679285e89a",
+    "ack_retry_control_passes": 10,
+    "ack_retry_control_total": 10,
+    "counter_rollover_seconds_each_board": 275,
+    "counter_rollover_boards": 2,
+    "sustained_delivery": {
+      "status": "FAIL",
+      "successful_messages": 232,
+      "failed_attempt": 233,
+      "failure": "ACK timeout",
+      "payload_retest_passed": 12,
+      "payload_retest_total": 12
+    },
+    "independent_libresdr": {
+      "status": "PASS bounded both-direction RF on one board; complete-system stability unverified",
+      "device": "LibreSDR B210mini clone, UHD type=b200/product=B210",
+      "genuine_ettus": false,
+      "semtech_firmware": false,
+      "negative_crc_control": "PASS: no text event",
+      "maximum_256_byte_four_fragment_message": "PASS",
+      "second_board_independent_sdr_test": "outstanding"
+    }
+  },
+  "limits": {
+    "commercial_semtech_interoperability": "UNVERIFIED",
+    "lorawan": false,
+    "tx_sample_exact_continuity": "UNVERIFIED",
+    "four_board_runtime_rf_acceptance": "INCOMPLETE after USB loss",
+    "range": "UNMEASURED: clock script failed after 22 local TX completions",
+    "usb_stability": "intermittent Device not configured failures unresolved",
+    "lcd_chat_display": false,
+    "auto_enter_chat_on_boot": false
+  },
+  "original_receipt_sha256": {
+    "info19_terminal_regression": "1c116d431de7da132d04ce98eae5cca18141d8386216186215c05b289b4fe65b",
+    "info19_gui_handoff": "55b4a600fd0bbd442860b180d75210d18dda4389a6f3c2e79567ef3a192076a1",
+    "info19_release_review": "3626392fe285a945d7764102a2e6b7e72bf07dfd22a45eadaee9ff5b31e607be",
+    "info18_immutable_manifest": "06bb415f99c2029e5f9f70dde51f3badb5dda2d165733cfef1382c96e1a3c0a4",
+    "info18_independent_sdr_review": "b0bc265b24402b1ff4272177ccbc1b97698f8e05e7724c026e0afb6d9f41f350",
+    "info19_four_board_followup_status": "c9e48da00b34e916cb2d61896558a62c0190409d8f6da5aa144c935df25d1bcb",
+    "info19_range_clock_state": "f6df5ace556a4c367e9da9c3bb0b237e5470fb00a3e2303176e0d07eb31982f3"
+  },
+  "export_checks": {
+    "source_matches_tested_package": true,
+    "source_file_count": 34,
+    "prebuilt_images_match_tested_package": true,
+    "source_build": {
+      "status": "PASS",
+      "sdk_commit": "25fe69f946311abdaf9ad56591f25fedbc20ac98",
+      "host": "macOS",
+      "cpu_target": "esp32s3",
+      "app_bytes": 709152,
+      "rebuilt_app_sha256": "bafda15a1b14e1076bdc9de1172ab6e8e485fda9a1d9c175f5b74f3c30d903c6",
+      "rebuilt_binary_flashed": false
+    },
+    "host_codec": {
+      "status": "PASS",
+      "known_vector": "deadbeef decode and generated-frame header/CRC",
+      "roundtrip_cases": 60,
+      "controls": "truncation, output capacity, invalid CR",
+      "initial_test_harness_failure": "Reference vector padding differed from generated unused pad nibbles. Corrected test retains known-answer decode; firmware unchanged."
+    },
+    "hardware_opened_for_export": false,
+    "host_tools": {
+      "uart_dry_run": "PASS",
+      "native": "PASS",
+      "absent_identity_guard": "PASS",
+      "corrupt_image_guard": "PASS",
+      "clock_help_from_other_directory": "PASS",
+      "bundled_timezone_fallback": "PASS",
+      "python_syntax": "PASS",
+      "relative_doc_links": {
+        "status": "PASS",
+        "count": 18
+      },
+      "dependency_versions": {
+        "pyserial": "3.5",
+        "esptool": "5.4.0",
+        "tzdata": "2026.2"
+      },
+      "tested_os": "macOS only; Windows/Linux not executed"
+    }
+  }
+}

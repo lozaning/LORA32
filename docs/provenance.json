@@ -1,0 +1,42 @@
+{
+  "idf_commit": "25fe69f946311abdaf9ad56591f25fedbc20ac98",
+  "idf_repository": "https://github.com/espressif/esp-idf.git",
+  "idf_submodules": [
+    "3c490f8059e0a7eeedda30aaa1e4b3afad06f632 components/esp_coex/lib (3c490f8)",
+    " e294ff039e26b3486d6c9e5853d24d98ee3300b2 components/esp_phy/lib (e294ff0)",
+    " 77143eec456e1cdcbce3e1dad8d5983cd28a368f components/esp_wifi/lib (77143ee)"
+  ],
+  "sdk_library_sha256": {
+    "components/esp_phy/lib/esp32s3/libphy.a": "038ac2bc37dc297e295811bc095d2b360a49aa0dddaa51ccb4b60ce2d1b2b73f",
+    "components/esp_phy/lib/esp32s3/libbtbb.a": "4d60de87cad0fa9519d68e0e40778a68dc61af040853fd0b5c45efa2a010ee94",
+    "components/esp_phy/lib/esp32s3/librfate.a": "8ff8c3e70679637227f3750cffe11c2c6028ebe571d249c499f7523a43e0c484",
+    "components/esp_phy/lib/esp32s3/libbttestmode.a": "53335f169bf48555d524c3eed180c7a5b4161b1cf4ce08abde12a8e9a8c0fd27",
+    "components/esp_phy/lib/esp32s3/librftest.a": "d3e3b808dd21f62c94841c4fffc0e33b6a04a0c0e5357b9a6e8675a1cd107324",
+    "components/esp_wifi/lib/esp32s3/libpp.a": "c12b2120fc5c42ddc4dd58ec77c4f44c5b82f43eee46478d292dd8fee4b191b0",
+    "components/esp_wifi/lib/esp32s3/libmesh.a": "40726fcc1e463f03f2922fd93e51822f77ec933dbf6cdf05615357377943d0b8",
+    "components/esp_wifi/lib/esp32s3/libsmartconfig.a": "fc2bf3e1c145629bf1b720c5db1e18a4183bff54c0109a62f2d67dbeaa87ccde",
+    "components/esp_wifi/lib/esp32s3/libcore.a": "7c9ea89271a564d23f0b5b8ce9054e2244b659f6f467621c67a15777efbfd665",
+    "components/esp_wifi/lib/esp32s3/libespnow.a": "c802c2665dd7f4e525581b9ee285699d86b38fc5888bb2db66c7de26956f4fc7",
+    "components/esp_wifi/lib/esp32s3/libnet80211.a": "71ca0d6765a9c3bddbf9e266d587f55d4a15751936a5a893ae7dbc5ef52e221f",
+    "components/esp_wifi/lib/esp32s3/libwapi.a": "820eef828e00b52457f6f573803315a7d647422ad90dced5b6fbfcca427835e8",
+    "components/esp_coex/lib/esp32s3/libcoexist.a": "81ef0c4b60fb153faf7e68dc5b63a8c66a578d82986033751e9961fa3abfb79d"
+  },
+  "firmware_app_sha256": "9b52c7b676945247ba00ccaf386008f390fb34358b4165cf0a664ef41867d665",
+  "upstream_references": [
+    {
+      "repository": "https://github.com/ESPARGOS/esp-sdr",
+      "commit": "550fadea4d00a9e26ce921c5832167becb3dc20c",
+      "purpose": "ADC acquisition and PIE/FFT source adaptation"
+    },
+    {
+      "repository": "https://github.com/tapparelj/gr-lora_sdr",
+      "commit": "862746dd1cf635c9c8a4bfbaa2c3a0ec3a5306c9",
+      "purpose": "SF7 coding algorithms"
+    },
+    {
+      "repository": "https://github.com/espressif/esp-dsp",
+      "commit": "a53a0756833c045311ea1d79a2badf495cdfde4c",
+      "purpose": "FFT original source"
+    }
+  ]
+}
